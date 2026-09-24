@@ -1,0 +1,7 @@
+ID,Type,Description,Probability,Impact,Mitigation,Owner,Status
+R01,Risk,Delegated subnet exhausts during scaling or rollout,3,5,Use production headroom and test revision overlap,Cloud architect,Open
+R02,Risk,Private DNS resolves to public endpoints,3,5,Use resolver design and automated resolution tests,Network architect,Open
+R03,Risk,Required tool uses a public endpoint,3,4,Review every tool path and obtain security decision,Security architect,Open
+D01,Dependency,Microsoft approves regional quota,4,5,Raise request before the pilot,Account team,Open
+D02,Dependency,Customer allocates non-overlapping CIDRs,3,5,Complete IPAM review during discovery,Network owner,Open
+I01,Issue,No reliable session-duration telemetry,4,3,Instrument the pilot and run a load profile,Application owner,Open
