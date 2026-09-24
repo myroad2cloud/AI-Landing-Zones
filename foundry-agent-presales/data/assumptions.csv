@@ -1,0 +1,9 @@
+ID,Category,Assumption or fact,Value,Classification,Source,Confidence,Validation action,Owner,Due phase
+A01,Demand,Eligible employees,"12,000",Assumed,Sponsor workshop,Medium,Confirm HR population,Business owner,Discovery
+A02,Demand,Peak active employees,"2,400",Estimated,20 percent of eligible users,Low,Read existing portal telemetry,Analytics lead,Discovery
+A03,Architecture,Hosted-agent share,30 percent,Design decision,Use-case review,Medium,Confirm runtime needs per use case,Application architect,Design
+A04,Architecture,Production projects,3,Assumed,Operating-model workshop,Medium,Confirm ownership boundaries,Platform owner,Discovery
+A05,Growth,24-month demand growth,30 percent,Forecast,Sponsor estimate,Low,Approve adoption curve,Sponsor,Design
+A06,Network,Production delegated subnet,/24,Design decision,Sizing model,High,Obtain IPAM approval,Network owner,Design
+A07,Quota,Regional session quota,250,Placeholder,Not confirmed,Low,Raise Microsoft support request,Cloud owner,Before pilot
+A08,Security,Data services require private access,Yes,Assumed requirement,Security workshop,Medium,Record formal control,CISO delegate,Discovery
