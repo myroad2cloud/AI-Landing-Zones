@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="780" viewBox="0 0 1400 780" role="img" aria-labelledby="title desc">
+  <title id="title">Private Microsoft Foundry Agent Service architecture</title>
+  <desc id="desc">Users access the Microsoft-managed Foundry platform. Hosted agents and project data proxies use a delegated subnet. The data proxy reaches Azure services through a separate private endpoint subnet.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#0078D4"/></marker>
+    <style>
+      .title{font:700 28px 'Segoe UI',Arial;fill:#17365D}.zone{font:700 22px 'Segoe UI',Arial;fill:#17365D}.label{font:600 18px 'Segoe UI',Arial;fill:#1F2937}.small{font:15px 'Segoe UI',Arial;fill:#374151}.box{stroke:#7A9CB8;stroke-width:2;rx:14}.flow{stroke:#0078D4;stroke-width:4;fill:none;marker-end:url(#arrow)}
+    </style>
+  </defs>
+  <rect width="1400" height="780" fill="#FFFFFF"/>
+  <text x="40" y="48" class="title">Microsoft Foundry Agent Service private networking</text>
+  <rect x="210" y="85" width="430" height="560" rx="22" fill="#EAF4FC" stroke="#0078D4" stroke-width="3"/>
+  <text x="240" y="125" class="zone">Microsoft-managed Foundry platform</text>
+  <rect x="255" y="175" width="160" height="82" class="box" fill="#D9EAF7"/><text x="335" y="210" text-anchor="middle" class="label">Foundry</text><text x="335" y="235" text-anchor="middle" class="label">endpoint</text>
+  <rect x="450" y="175" width="145" height="82" class="box" fill="#E2F0D9"/><text x="522" y="210" text-anchor="middle" class="label">Prompt</text><text x="522" y="235" text-anchor="middle" class="label">agent</text>
+  <rect x="350" y="345" width="170" height="82" class="box" fill="#D9EAF7"/><text x="435" y="395" text-anchor="middle" class="label">Tools Service</text>
+  <rect x="720" y="85" width="630" height="560" rx="22" fill="#F1FAEE" stroke="#70AD47" stroke-width="3"/>
+  <text x="750" y="125" class="zone">Customer Azure VNet</text>
+  <rect x="755" y="155" width="270" height="420" rx="18" fill="#FCE4D6" stroke="#ED7D31" stroke-width="3"/>
+  <text x="775" y="190" class="zone">Delegated subnet</text><text x="775" y="218" class="small">Microsoft.App/environments</text>
+  <rect x="790" y="260" width="200" height="90" class="box" fill="#FFFFFF"/><text x="890" y="300" text-anchor="middle" class="label">Hosted-agent</text><text x="890" y="327" text-anchor="middle" class="label">Micro VMs</text>
+  <rect x="790" y="405" width="200" height="90" class="box" fill="#FFFFFF"/><text x="890" y="445" text-anchor="middle" class="label">Single-tenant</text><text x="890" y="472" text-anchor="middle" class="label">Data Proxy</text>
+  <text x="775" y="535" class="small">Shared IP pool across all projects</text>
+  <rect x="1065" y="155" width="245" height="420" rx="18" fill="#E4DFEC" stroke="#7030A0" stroke-width="3"/>
+  <text x="1085" y="190" class="zone">Private endpoint subnet</text>
+  <rect x="1100" y="245" width="175" height="58" class="box" fill="#FFFFFF"/><text x="1188" y="281" text-anchor="middle" class="label">Azure Storage</text>
+  <rect x="1100" y="325" width="175" height="58" class="box" fill="#FFFFFF"/><text x="1188" y="361" text-anchor="middle" class="label">Cosmos DB</text>
+  <rect x="1100" y="405" width="175" height="58" class="box" fill="#FFFFFF"/><text x="1188" y="441" text-anchor="middle" class="label">Azure AI Search</text>
+  <rect x="1100" y="485" width="175" height="58" class="box" fill="#FFFFFF"/><text x="1188" y="521" text-anchor="middle" class="label">Key Vault and ACR</text>
+  <rect x="35" y="280" width="135" height="88" class="box" fill="#F2F2F2"/><text x="102" y="317" text-anchor="middle" class="label">Users and</text><text x="102" y="344" text-anchor="middle" class="label">applications</text>
+  <path d="M170 324 L255 216" class="flow"/><path d="M415 216 L450 216" class="flow"/><path d="M335 257 L405 345" class="flow"/><path d="M522 257 L465 345" class="flow"/><path d="M520 386 L790 450" class="flow"/><path d="M990 450 L1100 434" class="flow"/>
+  <rect x="235" y="675" width="950" height="70" rx="14" fill="#FFF2CC" stroke="#C9A227" stroke-width="2"/>
+  <text x="710" y="705" text-anchor="middle" class="label">Production starting point: /24 delegated subnet, plan below 80 percent utilization</text>
+  <text x="710" y="730" text-anchor="middle" class="small">Validate regional quota, private DNS, tool traffic paths and load-test results before approval</text>
+</svg>
