@@ -1,0 +1,12 @@
+ID,Theme,Question,Stakeholder,Evidence requested,Output
+Q01,Business,Which user journeys will the agent support and which outcomes define success?,Product owner,Use-case backlog and success measures,Prioritized use cases
+Q02,Demand,How many users are eligible active in the busiest hour and simultaneous?,Business and analytics,Usage reports and forecasts,Peak concurrency range
+Q03,Sessions,How are sessions created reused and terminated and what is P95 duration?,Application team,Application telemetry,Session model
+Q04,Agent type,Which use cases require a custom container or runtime?,Application architect,Runtime requirements,Prompt versus hosted split
+Q05,Projects,How many teams environments and regulatory boundaries need separation?,Platform owner,Operating model,Account and project topology
+Q06,Network,Which CIDRs are available and where are overlaps?,Network architect,IPAM export and VNet inventory,Address plan
+Q07,DNS,How do Azure and on-premises clients resolve private zones?,DNS team,Resolver and forwarding configuration,DNS design
+Q08,Security,Which tools may use public endpoints and is TLS inspection required?,Security architect,Security controls and exceptions,Allowed traffic matrix
+Q09,Operations,Which monitoring platform owns alerts and incident response?,Operations lead,Monitoring standards,Support model
+Q10,Resilience,What RTO RPO and regional failure scenarios apply?,Business continuity lead,BCP requirements,DR design
+Q11,Commercial,What are the adoption timeline and budget constraints?,Sponsor,Rollout forecast,ROM boundary
